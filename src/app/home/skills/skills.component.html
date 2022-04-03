@@ -1,0 +1,10 @@
+<div class="container">
+    <h2 class="text">Skills</h2>
+    <div *ngFor="let skillSub of skills; let j = index" class="row">
+        
+        <div *ngFor="let skill of skillSub; let i = index;" class="col-md p-3 ">  
+            <span class="icon" [ngClass]="skillFontAwesome[j][i]"></span>
+            <span class="skill">{{skill}}</span>
+        </div>
+    </div>
+</div>

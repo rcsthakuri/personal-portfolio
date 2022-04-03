@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="assets/ramchandra.jpeg" alt="Avatar"/>
+        </div>
+        <div class="col" id="header-info">
+            <span class='h2' [innerText]="htmlBindedText"></span>
+            <br>
+            <div>
+                <span>&nbsp;</span>
+                <span *ngIf="cursorAtEnd" class='h1' [innerText]="cursor"></span>
+            </div>
+        </div>
+    </div>
+</div>
