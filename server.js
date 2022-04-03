@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static('./dist/anuglar-personal-portfolio'));
 
 app.get('/*', (req, res) =>
-    res.sendFile('./front-end/dist/index.html')
+    res.sendFile('index.html', {root: './dist/anuglar-personal-portfolio'}),
 );
 
 // Start the app by listening on the default Heroku port
