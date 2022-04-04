@@ -10,8 +10,8 @@ import { timeout } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
   constructor() { }
-  textToAnimate = "Hey, I am Ramchandra Shahi Thakui.\n<h1>I love doing coding</h1>";
-  cursor = ''
+  textToAnimate = '$ Hey, I am Ramchandra Shahi Thakuri\n<span [color]="#330033">I love doing coding\n</span>';
+  textAnimateColor = '';  cursor = ''
   cursorAtEnd = false;
   htmlBindedText = '';
   async ngOnInit(): Promise<void> {

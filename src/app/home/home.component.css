@@ -1,6 +1,16 @@
 * {
     margin: 2px;
     margin-top: 10px;
-    text-align:justify;
+    /* text-align:justify; */
     /* text-justify: inter-word; */
+}
+.vl {
+
+    border-left: 2px solid black;
+    height: 140px;
+    margin-top: 80px;
+    position: absolute;
+  }
+app-skills {
+    position: relative;
 }

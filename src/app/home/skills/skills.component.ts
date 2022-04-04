@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
   counter = 0;
-  skills = this.chunk(['Python', 'Selenium', 'AngularJs', 'Cypress', 'Linux', 'Digital Marketing' , 'Another'], 3);
+  skills = this.chunk(['Python', 'Selenium', 'AngularJs', 'Cypress', 'Linux', 'Digital Marketing' , 'Other'], 3);
   skillFontAwesome = this.chunk([
     'fa-brands fa-python', 
     'fa-solid fa-robot', 

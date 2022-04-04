@@ -1,10 +1,15 @@
 img {
     border-radius: 50%;
     border-color: black;
-    border-style: solid;
     width: 200px;
+    margin-left: 20%;
+    position: relative;
   }
 #header-info {
   font-family: 'Anomaly Mono';
-  src: url(../../../assets/fonts/AnomalyMono-Regular.otf) format(('openntype'))
+  color: black;
+}
+@font-face {
+  font-family: 'Anomaly Mono';
+  src: url(../../../assets/fonts/AnomalyMono-Regular.otf) format(('openntype'));
 }
