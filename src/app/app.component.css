@@ -1,6 +1,5 @@
 body {
     padding-top: 100px;
-    background-image: url('../assets/background.webm');
   }
   @media (max-width: 979px) {
     body {
