@@ -34,6 +34,7 @@ import { HeaderTextAnimationComponent } from './home/header/header-text-animatio
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
