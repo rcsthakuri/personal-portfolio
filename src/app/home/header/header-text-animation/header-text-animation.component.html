@@ -1,0 +1,13 @@
+<span [innerText]="htmlBindTextArray[0]" class="h3"></span>
+<ng-container *ngFor="let htmlBindText of htmlBindTextArray; let i = index;">
+    <span 
+    *ngIf="i < htmlBindTextArray.length - 1 && !cursorAtEnd; "
+    [innerText]="htmlBindTextArray[i+1]" 
+    ngClass='h5 text-anim{{i+1}}'></span>
+</ng-container>
+<span *ngIf="cursorAtEnd" class="h3" [ngStyle]="{'color': 'skyblue'}">I love coding!</span>
+<br>
+<div>
+    <span *ngIf="cursorAtEnd" class='h3'>$</span>
+    <span *ngIf="cursorAtEnd" class='h3' [innerText]="cursor"></span>
+</div>

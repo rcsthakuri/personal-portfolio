@@ -4,12 +4,7 @@
             <img src="assets/ramchandra.jpeg" alt="Avatar"/>
         </div>
         <div class="col-md mt-1 p-1 center" id="header-info">
-            <span class='h3' [innerText]="htmlBindedText" [ngStyle]="{'color': textAnimateColor}"></span>
-            <br>
-            <div>
-                <span>&nbsp;</span>
-                <span *ngIf="cursorAtEnd" class='h1' [innerText]="cursor"></span>
-            </div>
+            <app-header-text-animation></app-header-text-animation>
         </div>
     </div>
 </div>

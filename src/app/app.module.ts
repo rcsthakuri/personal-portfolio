@@ -12,6 +12,9 @@ import { WorkExperienceComponent } from './home/work-experience/work-experience.
 import { EducationComponent } from './home/education/education.component';
 import { HeaderComponent } from './home/header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule  } from './material/material.module';
+import { HeaderTextAnimationComponent } from './home/header/header-text-animation/header-text-animation.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +27,13 @@ import { FooterComponent } from './footer/footer.component';
     WorkExperienceComponent,
     EducationComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderTextAnimationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
