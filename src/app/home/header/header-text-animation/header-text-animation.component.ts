@@ -73,18 +73,11 @@ export class HeaderTextAnimationComponent implements OnInit {
 
    async ngOnInit(): Promise<void> {
     console.log(this.textToAnimateArray.length)
-    for(let j = 0; j < this.textToAnimateArray.length; j++) {
-      setInterval(() => {
-        if(this.cursor == '|')
-        {
-          this.cursor = '';
-        }
-        else {
-          this.cursor = '|';
-        } 
-      }, 200)
-      
+    const cursorInterval = this.cursorEffect(150)
+   
+    for(let j = 0; j < this.textToAnimateArray.length; j++) {     
       let currentText = this.textToAnimateArray[j];
+     
       for(let i = 0; i < currentText.length; i++) {
         this.htmlBindTextArray[j] = this.htmlBindTextArray[j].replace('|', '')
         this.htmlBindTextArray[j]= this.htmlBindTextArray[j].concat(currentText[i])
@@ -92,14 +85,27 @@ export class HeaderTextAnimationComponent implements OnInit {
         console.log(this.htmlBindText)
         await this.sleep(90)
       }
-    this.htmlBindTextArray[j] = this.htmlBindTextArray[j].replace('|', '')
+   
+      this.htmlBindTextArray[j] = this.htmlBindTextArray[j].replace('|', '')
 
    
     }
-
-    this.htmlBindTextArray[this.htmlBindTextArray.length -1] = this.htmlBindTextArray[this.htmlBindTextArray.length -1].replace('|', '')
     this.cursorAtEnd = true;
+    clearInterval(cursorInterval)
+    this.cursorEffect(400)
    
+  }
+  
+cursorEffect(blinkSpeed: number) {
+  return setInterval(() => {
+      if(this.cursor == '|')
+      {
+        this.cursor = '';
+      }
+      else {
+        this.cursor = '|';
+      } 
+    }, blinkSpeed)
   }
   
   sleep(ms: number) {
